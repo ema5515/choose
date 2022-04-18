@@ -39,10 +39,17 @@ $(document).on('click', 'img.delete-button',function(){
 
     var index = options.indexOf(removeItems);
 
-    options.splice(index, index+1);
+    options.splice(index, 1);
     console.log(options);
     
     noOption();
+});
+
+$(document).on('keypress', function(event){
+    if (event.keyCode == 13){
+        addOption();
+        nextOption = $(".new-option").val('');
+    }
 });
 
 function addOption(){
@@ -55,8 +62,10 @@ function addOption(){
     noOption();
 }
 
-
 function startChoose(){
+    if (options.length === 0){
+        $(".result-option").text("No options added");
+    };
     result = Math.floor(Math.random() * options.length);
     console.log(result);
     $(".result-option").text(options[result]);
