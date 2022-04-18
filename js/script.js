@@ -1,7 +1,7 @@
-var options = ["a", "b"];
+var options = [];
 var result;
 var nextOption;
-const optionLayout = "<li>" + nextOption + "<img src='file/svg/delete.svg' alt=''></li>";
+var optionLayout;
 
 $(".start").click(function(){
     console.log("button start clicked");
@@ -32,13 +32,27 @@ $(".add-button").click(function(){
     addOption();
 });
 
+$(document).on('click', 'img.delete-button',function(){
+    $(this).closest('li').remove();
+
+    var removeItems = $(this).closest('li').text();
+
+    var index = options.indexOf(removeItems);
+
+    options.splice(index, index+1);
+    console.log(options);
+    
+    noOption();
+});
 
 function addOption(){
     nextOption = $(".new-option").val();
+    optionLayout = "<li>" + nextOption + "<img class='delete-button' src='file/svg/delete.svg' alt=''></li>"
     options.push(nextOption);
 
     $("ul").append(optionLayout);
 
+    noOption();
 }
 
 
@@ -47,4 +61,12 @@ function startChoose(){
     console.log(result);
     $(".result-option").text(options[result]);
 
+}
+
+function noOption() {
+    if (options.length > 0){
+        $(".no-option").addClass("display-no");
+    } else {
+        $(".no-option").removeClass("display-no");
+    }
 }
