@@ -1,0 +1,16 @@
+{
+    "background_color": "white",
+    "description": "random chose from user's input",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "file/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "name": "Chose",
+    "short_name": "Chose",
+    "start_url": "index.html"
+  }
+  

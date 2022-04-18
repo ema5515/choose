@@ -14,13 +14,6 @@ body{
 }
 
 /* ===== DOC ===== */
-div.title{
-    background-color: #36393B;
-    width: 60%;
-    max-width: 400px;
-    margin: 0 auto;
-    border-radius: 0 0 10px 10px;
-}
 h1.title{
     font-weight: 900;
     font-size: 3rem;
