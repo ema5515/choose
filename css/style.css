@@ -1,5 +1,9 @@
+
 body{
     font-family: 'Montserrat';
+    background-color: #D4D4D4;
+    text-align: center;
+    margin: 0
 }
 
 .light{
@@ -10,14 +14,81 @@ body{
 }
 
 /* ===== DOC ===== */
-
-.title{
+div.title{
+    background-color: #36393B;
+    width: 60%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+}
+h1.title{
     font-weight: 900;
     font-size: 3rem;
-    
+    margin: 0 auto 45px auto;
+    padding-top: 25px;
+}
+.list-option{
+    background-color: #36393B;
+    border-radius: 15px;
+    padding: 15px;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+}
+.list-option li{
+    font-size: 1.8rem;
+    color: #F6F8FC;    
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: left;
+}
+.list-option img{
+    height: 1.5rem;
+    position: relative;
+    float: right;
+    margin: 0.55rem 0;
+    word-wrap: break-word;
+}
+.add-option input{
+    display: block;
+    margin: 25px auto;
+    width: 70%;
+    max-width: 400px;
+    height: 35px;
+    border: 5px solid #36393B;
+    border-radius: 10px;
+}
+.add-option button{
+    color: #000;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    font-size: 1.7rem;
+    padding: 3px;
+    width: 30%;
+    max-width: 200px;
+    border: none;
+    border-radius: 10px;
+    background-color: #C6F91F;
 }
 
-/* ===== NAVBAR =====*/
+/* ===== RESULT ===== */
+.result-title{
+    font-weight: 900;
+    font-size: 4rem;
+    color: #C6F91F;
+    -webkit-animation: fill 0.5s infinite alternate;
+}
+
+@-webkit-keyframes fill {
+  from { -webkit-text-fill-color: #36393B; }
+  to { -webkit-text-fill-color: #C6F91F; }
+}
+
+.result-option{
+    font-weight: 900;
+    font-size: 4rem;
+}
+/* ===== NAVBAR ===== */
 
 .navbar{
     position: fixed;
@@ -44,8 +115,13 @@ body{
     position: relative;
     margin: 5px auto;
     text-align: center;
+    background-color: transparent;
 }
 .btn{
     font-weight: 900;
     padding-top: 4px;
+}
+
+.display-no{
+    display: none;
 }
